@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Days Between Dates Calculator — Free Date Difference Tool | Tabutility</title>
+  <meta name="description" content="Calculate the exact number of days, weeks, months and years between any two dates. Free, instant date difference calculator — no sign-up needed."/>
+  <link rel="canonical" href="https://date-difference-calculator.tabutility.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://date-difference-calculator.tabutility.com/"/>
+  <meta property="og:title" content="Days Between Dates Calculator — Free Date Difference Tool"/>
+  <meta property="og:description" content="Calculate the exact number of days, weeks, months and years between any two dates."/>
+  <meta property="og:site_name" content="Tabutility"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>"/>
+  <meta name="theme-color" content="#1a1a2e"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Days Between Dates Calculator","url":"https://date-difference-calculator.tabutility.com/","description":"Calculate the exact number of days, weeks, months and years between any two dates.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate days between two dates?","acceptedAnswer":{"@type":"Answer","text":"Enter your start and end dates above and the calculator instantly shows the exact number of days, weeks, months and years between them."}},{"@type":"Question","name":"Does it include the start and end date?","acceptedAnswer":{"@type":"Answer","text":"By default it counts the days between (exclusive). Toggle 'Include end date' to add one extra day."}},{"@type":"Question","name":"Is this calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}}]}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+    a{color:#4f46e5;text-decoration:none}
+    nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .nav-brand{color:#fff;font-size:18px;font-weight:800}
+    .nav-links a{color:rgba(255,255,255,0.8);font-size:14px;margin-left:20px;font-weight:500}
+    .hero{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:40px 20px 32px;text-align:center}
+    .hero h1{font-size:clamp(24px,4vw,38px);font-weight:900;margin:0 0 10px}
+    .hero p{color:rgba(255,255,255,0.75);margin:0;font-size:16px}
+    .wrap{max-width:680px;margin:0 auto;padding:32px 20px 60px}
+    .card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 2px 16px rgba(0,0,0,0.07);margin-bottom:24px;border:1.5px solid #e8ecf2}
+    .card h2{font-size:18px;font-weight:800;margin:0 0 20px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:500px){.row{grid-template-columns:1fr}}
+    label{display:block;font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.4px}
+    input[type=date]{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:16px;font-weight:600;color:#1e293b;background:#f8fafc;outline:none;transition:border 0.2s}
+    input[type=date]:focus{border-color:#4f46e5;background:#fff}
+    .toggle-row{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:14px;font-weight:600;color:#475569}
+    .switch{position:relative;width:44px;height:24px;cursor:pointer}
+    .switch input{opacity:0;width:0;height:0}
+    .slider{position:absolute;inset:0;background:#cbd5e1;border-radius:24px;transition:.3s}
+    .slider::before{content:'';position:absolute;width:18px;height:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
+    .switch input:checked+.slider{background:#4f46e5}
+    .switch input:checked+.slider::before{transform:translateX(20px)}
+    .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:4px}
+    @media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
+    .result-box{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:14px;padding:20px;text-align:center;color:#fff}
+    .result-box.alt{background:linear-gradient(135deg,#0ea5e9,#0284c7)}
+    .result-box.alt2{background:linear-gradient(135deg,#10b981,#059669)}
+    .result-box.alt3{background:linear-gradient(135deg,#f59e0b,#d97706)}
+    .result-num{font-size:clamp(28px,6vw,42px);font-weight:900;line-height:1}
+    .result-label{font-size:13px;font-weight:600;opacity:0.85;margin-top:4px}
+    .detail-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:15px}
+    .detail-row:last-child{border-bottom:none;font-weight:700}
+    .ad-wrap{margin:20px 0;text-align:center;min-height:90px;background:#f8fafc;border-radius:8px}
+    .empty{text-align:center;color:#94a3b8;padding:20px;font-size:15px}
+    .btn{width:100%;padding:14px;background:#4f46e5;color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;transition:background 0.2s}
+    .btn:hover{background:#4338ca}
+    .info{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:#1e40af;margin-top:16px}
+    footer{background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:24px 20px;font-size:14px}
+    footer a{color:#818cf8}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="https://tabutility.com" class="nav-brand">⚡ Tabutility</a>
+  <div class="nav-links">
+    <a href="https://tabutility.com">All Tools</a>
+    <a href="https://tabutility.com/blog/">Blog</a>
+  </div>
+</nav>
+<div class="hero">
+  <h1>📅 Days Between Dates Calculator</h1>
+  <p>Find the exact number of days, weeks, months and years between any two dates</p>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>Select Your Dates</h2>
+    <div class="row">
+      <div>
+        <label>Start Date</label>
+        <input type="date" id="start" oninput="calc()"/>
+      </div>
+      <div>
+        <label>End Date</label>
+        <input type="date" id="end" oninput="calc()"/>
+      </div>
+    </div>
+    <div class="toggle-row">
+      <label class="switch">
+        <input type="checkbox" id="inclusive" onchange="calc()"/>
+        <span class="slider"></span>
+      </label>
+      Include both start and end dates
+    </div>
+  </div>
+
+  <div id="results-card" class="card" style="display:none">
+    <h2>Results</h2>
+    <div class="result-grid">
+      <div class="result-box"><div class="result-num" id="r-days">0</div><div class="result-label">Days</div></div>
+      <div class="result-box alt"><div class="result-num" id="r-weeks">0</div><div class="result-label">Weeks</div></div>
+      <div class="result-box alt2"><div class="result-num" id="r-months">0</div><div class="result-label">Months</div></div>
+      <div class="result-box alt3"><div class="result-num" id="r-years">0</div><div class="result-label">Years</div></div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="detail-row"><span>Total days</span><span id="d-days">—</span></div>
+      <div class="detail-row"><span>Total weeks (+ days)</span><span id="d-weeks">—</span></div>
+      <div class="detail-row"><span>Weekdays (Mon–Fri)</span><span id="d-weekdays">—</span></div>
+      <div class="detail-row"><span>Weekend days</span><span id="d-weekend">—</span></div>
+    </div>
+  </div>
+
+  <div id="empty-card" class="card">
+    <div class="empty">📅 Select a start and end date above to see the difference</div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="card">
+    <h2>About This Calculator</h2>
+    <p style="font-size:15px;color:#475569;margin:0">Use this free calculator to find the number of days between any two dates — useful for project deadlines, countdowns, anniversary tracking, age calculations, or legal timelines. Toggle "include both dates" if you need to count both the start and end day.</p>
+  </div>
+</div>
+<footer>
+  <p>© 2025 <a href="https://tabutility.com">Tabutility</a> — Free Online Tools</p>
+</footer>
+<script>
+  // Set default dates: today and +30 days
+  const today = new Date();
+  const future = new Date(today); future.setDate(future.getDate()+30);
+  document.getElementById('start').value = today.toISOString().split('T')[0];
+  document.getElementById('end').value = future.toISOString().split('T')[0];
+  calc();
+
+  function calc(){
+    const s = document.getElementById('start').value;
+    const e = document.getElementById('end').value;
+    if(!s||!e){
+      document.getElementById('results-card').style.display='none';
+      document.getElementById('empty-card').style.display='block';
+      return;
+    }
+    const inc = document.getElementById('inclusive').checked ? 1 : 0;
+    let d1 = new Date(s), d2 = new Date(e);
+    if(d2 < d1){ [d1,d2]=[d2,d1]; }
+    const msDay = 86400000;
+    let totalDays = Math.round((d2-d1)/msDay) + inc;
+    if(totalDays < 0) totalDays = 0;
+
+    // weeks + leftover days
+    const weeks = Math.floor(totalDays/7);
+    const remDays = totalDays % 7;
+
+    // months approx
+    const months = Math.floor(totalDays/30.4375);
+    const years = Math.floor(totalDays/365.25);
+
+    // weekdays
+    let weekdays=0, weekends=0;
+    let cur = new Date(d1);
+    for(let i=0;i<totalDays;i++){
+      const dow = cur.getDay();
+      if(dow===0||dow===6) weekends++; else weekdays++;
+      cur.setDate(cur.getDate()+1);
+    }
+
+    document.getElementById('r-days').textContent = totalDays.toLocaleString();
+    document.getElementById('r-weeks').textContent = weeks.toLocaleString();
+    document.getElementById('r-months').textContent = months.toLocaleString();
+    document.getElementById('r-years').textContent = years.toLocaleString();
+    document.getElementById('d-days').textContent = totalDays.toLocaleString() + ' days';
+    document.getElementById('d-weeks').textContent = weeks + ' weeks' + (remDays ? ' + '+remDays+' days' : '');
+    document.getElementById('d-weekdays').textContent = weekdays.toLocaleString();
+    document.getElementById('d-weekend').textContent = weekends.toLocaleString();
+
+    document.getElementById('results-card').style.display='block';
+    document.getElementById('empty-card').style.display='none';
+  }
+</script>
+</body>
+</html>
