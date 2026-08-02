@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://date-difference-calculator.tabutility.com/sitemap.xml
