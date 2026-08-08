@@ -7,7 +7,6 @@
 <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
   <title>Days Between Dates Calculator — Free Date Difference Tool | Tabutility</title>
   <meta name="description" content="Calculate the exact number of days, weeks, months and years between any two dates. Free, instant date difference calculator — no sign-up needed."/>
   <link rel="canonical" href="https://date-difference-calculator.tabutility.com/"/>
@@ -26,7 +25,7 @@
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
   <style>
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#ffffff;line-height:1.6}
+    body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
     a{color:#4f46e5;text-decoration:none}
     nav{background:#1a1a2e;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
     .nav-brand{color:#fff;font-size:18px;font-weight:800}
@@ -40,19 +39,19 @@
     .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     @media(max-width:500px){.row{grid-template-columns:1fr}}
     label{display:block;font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.4px}
-    input[type=date]{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:16px;font-weight:600;color:#ffffff;background:#f8fafc;outline:none;transition:border 0.2s}
+    input[type=date]{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:10px;font-size:16px;font-weight:600;color:#1e293b;background:#f8fafc;outline:none;transition:border 0.2s}
     input[type=date]:focus{border-color:#4f46e5;background:#fff}
     .toggle-row{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:14px;font-weight:600;color:#475569}
     .switch{position:relative;width:44px;height:24px;cursor:pointer}
     .switch input{opacity:0;width:0;height:0}
-    .slider{position:absolute;inset:0;background:#334155;border-radius:24px;transition:.3s}
+    .slider{position:absolute;inset:0;background:#cbd5e1;border-radius:24px;transition:.3s}
     .slider::before{content:'';position:absolute;width:18px;height:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
     .switch input:checked+.slider{background:#4f46e5}
     .switch input:checked+.slider::before{transform:translateX(20px)}
     .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:4px}
     @media(max-width:500px){.result-grid{grid-template-columns:1fr 1fr}}
     .result-box{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:14px;padding:20px;text-align:center;color:#fff}
-    .result-box.alt{background:linear-gradient(135deg,#334155,#0284c7)}
+    .result-box.alt{background:linear-gradient(135deg,#4338ca,#0284c7)}
     .result-box.alt2{background:linear-gradient(135deg,#10b981,#059669)}
     .result-box.alt3{background:linear-gradient(135deg,#f59e0b,#d97706)}
     .result-num{font-size:clamp(28px,6vw,42px);font-weight:900;line-height:1}
@@ -60,20 +59,21 @@
     .detail-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:15px}
     .detail-row:last-child{border-bottom:none;font-weight:700}
     .ad-wrap{margin:20px 0;text-align:center;min-height:90px;background:#f8fafc;border-radius:8px}
-    .empty{text-align:center;color:#64748b;padding:20px;font-size:15px}
+    .empty{text-align:center;color:#94a3b8;padding:20px;font-size:15px}
     .btn{width:100%;padding:14px;background:#4f46e5;color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;transition:background 0.2s}
     .btn:hover{background:#4338ca}
     .info{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:#1e40af;margin-top:16px}
     footer{background:#1a1a2e;color:rgba(255,255,255,0.6);text-align:center;padding:24px 20px;font-size:14px}
     footer a{color:#818cf8}
   </style>
-<style id="tabutility-brand">
-/* empty ad slots: reserve space, no bordered box */
-.ad-banner,.ad-slot,.ad-container{background:transparent!important;border:none!important;border-bottom:none!important;box-shadow:none!important}
+<style id="tabutility-brand-v2">
+/* Canonical dark-surface spec (STYLE.md): indigo accent, white text on indigo */
+.btn,.toggle-btn.active,button.active{color:#fff!important}
+nav .brand{color:#fff}
+nav a:hover{color:#818cf8}
+input:focus,select:focus,textarea:focus{border-color:#818cf8!important}
 /* AdSense not yet approved: hide all ad frames (container min-height still reserves space). Remove these two lines after approval. */
 ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibility:hidden!important}
-nav .brand{color:#0f172a}
-body{-webkit-font-smoothing:antialiased}
 </style>
 </head>
 <body>
@@ -198,28 +198,28 @@ body{-webkit-font-smoothing:antialiased}
 </script>
 
 <!-- embed-widget -->
-<div style="max-width:640px;margin:0 auto 32px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px">
-  <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
+<div style="max-width:640px;margin:0 auto 32px;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px">
+  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
   <p style="font-size:13px;color:#64748b;margin-bottom:12px">Add this Days Between Dates Calculator to your website or blog for free — just paste this code:</p>
-  <div style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:'Inter',monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://date-difference-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Days Between Dates Calculator by Tabutility&quot;&gt;&lt;/iframe&gt;
+  <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#818cf8;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://date-difference-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Days Between Dates Calculator by Tabutility&quot;&gt;&lt;/iframe&gt;
 &lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;https://date-difference-calculator.tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Days Between Dates Calculator&lt;/a&gt; by &lt;a href=&quot;https://tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tabutility&lt;/a&gt;&lt;/p&gt;</div>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#4f46e5;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
   <span style="font-size:11px;color:#475569;margin-left:12px">Free to use — the credit link helps others find the tool</span>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://www.amazon.com/s?k=personal+finance+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Want to master your money?">
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=personal+finance+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Want to master your money?">
   <span style="font-size:28px;flex-shrink:0">📚</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Want to master your money?</div>
-    <div style="font-size:12px;color:#64748b">Browse personal finance books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Want to master your money?</div>
+    <div style="font-size:12px;color:#94a3b8">Browse personal finance books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
   </div>
 </div>
-<h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
+<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
 <div style="max-width:640px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-  <a href="https://percentage-change-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Percentage Change Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
-  <a href="https://amortization-schedule.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Amortization Schedule</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
-  <a href="https://split-bill-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Split Bill Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
-  <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#0f172a">Percentage Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div></a>
+  <a href="https://percentage-change-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Percentage Change Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
+  <a href="https://amortization-schedule.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Amortization Schedule</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
+  <a href="https://split-bill-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Split Bill Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
+  <a href="https://percentage-calculator.tabutility.com/" style="display:block;background:rgba(30,41,59,1);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Percentage Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
 </div>
 </body>
 </html>
